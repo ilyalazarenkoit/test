@@ -1,0 +1,49 @@
+.grid-wrapper {
+  overflow-x: auto;
+}
+
+.grid-container {
+  width: max-content;
+  min-width: 100%;
+}
+
+.grid-cell {
+  min-height: 80px;
+  min-width: 160px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.2s, outline 0.1s;
+  cursor: default;
+  user-select: none;
+}
+
+.grid-cell[draggable='true'] {
+  cursor: grab;
+}
+
+.grid-cell.dragging {
+  opacity: 0.4;
+}
+
+.grid-cell.dragging * {
+  cursor: grabbing;
+}
+
+.grid-cell.drag-over {
+  outline: 2px dashed #555;
+  outline-offset: -2px;
+}
+
+.grid-cell input[type='text'],
+.grid-cell select {
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.grid-cell label {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
